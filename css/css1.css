@@ -1,0 +1,1243 @@
+/*-----------------------------------------------------------------------------------------------------------*/
+/*公共部分开始*/
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+th,
+td,
+tr{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+/*清除浮动*/
+.clearfix:after { 
+content: ""; 
+display: block; 
+clear: both;
+visibility:hidden；
+height:0;
+}
+
+/*清除浮动*/
+body {
+	padding-top: 30px;
+}
+input{
+	vertical-align: middle;
+	margin-right: 3px;
+}
+a    {
+	cursor: pointer;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+/*公共部分结束*/
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*nav界面编写开始*/
+
+#nav-index{
+	width: 950px;
+	margin: 0px auto 25px auto;
+}
+#nav-index h1{
+	display: inline-block;
+	width: 160px;
+	height: 34px;
+	margin: 0px 20px 0px 0px;
+	background: url(../img/logo_db.png) no-repeat;
+	padding:0px;
+	zoom:1;
+	font-size: 12px;
+	font-weight: normal;
+}
+#nav-index h1 a{
+	cursor: pointer;
+	height: 34px;
+	display: block;
+	opacity: 0;
+}
+.nav-links{
+	float: right;
+	padding-top: 9px;
+}
+.nav-links ul{
+	padding: 0px;
+	margin: 0px;
+}
+.nav-links ul li{
+	display: inline-block;
+	margin-left: 17px;
+	height: 20px;
+	zoom:1;
+}
+.nav-links ul li a{
+	background:url(../img/anony_nav_logo.png) 100% 100%	no-repeat;
+	text-indent: -9999em;
+	display:inline-block;
+	width: 40px;
+	height: 20px;
+	overflow: hidden;
+	outline: none;
+	zoom:1;
+	line-height: 20em;
+}
+#nav-index .nav-links .link-bk{background-position:   0px, 0px;
+}
+#nav-index .nav-links .link-mv{background-position: -60px, 0px;
+}
+#nav-index .nav-links .link-mc{background-position: -120px,0px;
+}
+#nav-index .nav-links .link-ts{background-position: -180px,0px;
+}
+#nav-index .nav-links .link-tc{background-position: -241px,0px;
+}
+#nav-index .nav-links .link-fm{background-position: -299px,0px;
+}
+#nav-index .nav-links .link-tm{background-position: -359px,0px;
+}
+#nav-index .nav-links .link-dp{background-position: -421px,0px;width: 42px;
+}
+.nav-srh{
+	float: right;
+	width: 270px;
+	height: 30px;
+	border: solid 1px #c3c3c3;
+	position: relative;
+	margin-top: 3px;
+}
+.nav-srh form{
+	display: block;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.nav-srh .srh-inp{
+	display: block;
+	height: 30px;
+	overflow: hidden;
+}
+.nav-srh .srh-inp input{
+	width: 240px;
+	height: 20px;
+	padding: 5px;
+	border: none;
+	font-size: 13px;
+	vertical-align: middle;
+	outline: none;
+	opacity: 0.5;
+}
+.nav-srh .srh-btm{
+	border: none;
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	overflow: hidden;
+	right: 0px;
+	top: 0px;
+	background: url(../img/bn_srh_1.png) no-repeat 50% 50%;
+}
+.nav-srh .srh-btm input{
+	border: 0;
+	background: transparent;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	overflow: hidden;
+	font-size: 0;
+	padding: 0;
+}
+
+/*nav编写部分完结！
+	问题1：查找按钮为什么会向下移动？
+	问题2：nav部分设置为34px高度，为什么会变成38px?
+
+	总结 1： 文字隐藏方法：1. opacity设置为0；
+						 2. text-indent设置为-9999em;
+	总结 2： 输入边框的隐藏方法：outline设置为none;
+	总结 3： 光标移动到当前位置变为小手标志方法：curcor设置为pointer；
+*/
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*login界面编写开始！*/
+#index-lg{
+	background-image: url(https://img1.doubanio.com/view/puppy_image/raw/public/1653ca7fe02u04zlerm.jpg);
+	margin-bottom: 25px;
+	background-size: contain;
+	background-position: calc(50% - 305px) top;
+	background-repeat: no-repeat;
+	background-color: #edf4ed; 
+	height: 178px;
+}
+#index-lg .navlogin{
+	width: 950px;
+	margin: 0 auto;
+	padding: 28px 0px 4px 0px;
+	position: relative;
+	overflow: visible;
+	zoom:1;
+}
+#index-lg .navlogin .login{
+	float: right;
+	width: 284px;
+	position: relative;
+	overflow: hidden;
+
+}
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓清除浮动↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+#index-lg .navlogin::before{
+	content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: 0 -150px;
+}
+.navlogin::after{
+	content: "\0020";
+    display: block;
+    clear: both;
+}
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑清除浮动------------------------------------------↑*/
+#index-lg .navlogin .login fieldset{
+	border:none;
+}
+#index-lg .navlogin .login .lg-item{
+	margin-bottom: 4px;
+	position: relative;
+}
+#index-lg .navlogin .login .username input{
+	width: 252px;
+	height: 30px;
+	padding: 0px 8px;
+	font-size: 12px;
+	line-height: 30px;
+	outline: none;
+	border:1px solid #dbe5db;
+	border-radius: 2px;
+}
+#index-lg .navlogin .login .password {
+	position: relative;
+    border: 1px solid #DBE5DB !important;
+    border-radius: 2px;
+    background: #fff;
+    width: 268px;
+}
+#index-lg .navlogin .login .password input{
+	width: 220px;
+	height: 30px;
+	padding: 0px 8px;
+	font-size: 12px;
+	line-height: 30px;
+	outline: none;
+	border:1px solid #dbe5db;
+	border:none;
+}
+#index-lg .navlogin .login .password .pw-help{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	font-size: 12px;
+	line-height: 30px;
+}
+#index-lg .navlogin .login .password .pw-help a{
+	color: #ccc;
+}
+#index-lg .navlogin .login .sbt-inp{
+	padding: 0px 22px;
+	height: 30px;
+	font-size: 12px;
+	border:none;
+	border-radius: 2px;
+    cursor: pointer;
+    background: #30A080;
+    border-color: #30A080;
+    color: #fff;
+    width: 89px;
+    box-sizing: content-box;
+    position: relative;
+}
+#index-lg .navlogin .login input{
+	margin-right: 0px !important;
+}
+#index-lg .navlogin .login .submit a{
+	display: inline-block;
+	float: right;
+}
+#index-lg .navlogin .login .submit .sbt-join{
+	padding: 8px 21px 7px 21px;
+	border: 1px solid #30A080;
+	font-size: 12px;
+	border-radius: 2px;
+	cursor: pointer;
+	color: #30A080;
+	width: 89px;
+	text-align: center;
+	line-height: 1;
+	margin-left: 4px;	
+}
+#index-lg .navlogin .login .abt{
+	font-size: 12px;
+	color: #666;
+}
+#index-lg .navlogin .login .abt .other-login li{
+
+	display: inline-block;
+}
+#index-lg .navlogin .login .abt .other-login a{
+	color: #37a;
+}
+#index-lg .navlogin .login .abt .other-login{
+	float: right;
+	font-size: 0px;
+	margin-right: 4px;
+	margin-top: 3px;
+}
+#index-lg .navlogin .login .abt .other-login a:before{
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#index-lg .navlogin .login .abt .other-login .weixin:before{
+	background-image: url(../img/wechat.png);
+	margin-right: 8px;
+}
+#index-lg .navlogin .login .abt .other-login .weibo:before{
+	background-image: url(../img/weibo.png); 
+}
+#index-lg .navlogin .app{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0px auto 430px;
+	height: 120px;
+	z-index: 2;
+}
+#index-lg .navlogin .app .app-ver{
+	margin: 7px 0px;
+	line-height: 24px;
+	color: #111;
+	font-size: 25px;
+}
+.app-ver span{
+	margin-left: 10px;
+	color: #111;
+	font-weight: 400;
+	font-size: 25px;
+}
+#index-lg .navlogin .app .app-btn{
+	display: inline-block;
+	background: #00B51D;
+	color: #fff;
+	padding: 9px 21px;
+	font-size: 12px;
+	border-radius: 2px;
+	line-height: 1;
+	margin-right: 2px;
+	margin-top: 19px;
+}
+#index-lg .navlogin .app .app-dld{
+	display: inline-block;
+	zoom:1;
+	position: relative;
+	border: 1px solid #48aa0d;
+    border-radius: 2px;
+    bottom: 1px;
+    cursor: pointer;
+}
+#index-lg .navlogin .app .app-dld .dld-link{
+	display: inline-block;
+	zoom:1;
+}
+#index-lg .navlogin .app .app-dld a,img{
+	border-width: none;
+	vertical-align: middle;
+}
+#index-lg .navlogin .app .app-dld .app-erweima{
+	display: none;
+    position: absolute;
+    top: -1px;
+    right: -171px;
+    padding: 20px 20px 5px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    background: #fff; 
+    line-height: 12px;
+    white-space: nowrap;
+}
+/*二维码展示*/
+#index-lg .navlogin .app .app-dld:hover .app-erweima{
+	display: inline-block;
+}
+/*二维码展示*/
+
+
+#index-lg .navlogin .app .app-dld .app-qr-expand img{
+	border:0px;
+	height: 160px；
+	width:160px;
+}
+
+
+/*login界面编写结束！*/
+	问题1：二维码模块的显示问题没有解决
+	问题2：父元素没有完整的包裹它的子元素
+
+	总结 1： <legend>标签作为<fieldset>标签的标题使用
+			<fieldset><legend>标题</legend></fieldset>
+	总结 2： text-overflow：clip | ellipsis
+	总结 3：	默认值：clip 适用于：所有元素
+			clip： 当对象内文本溢出时不显示省略标记（...），而是将溢出的部分裁切掉。 
+			ellipsis： 当对象内文本溢出时显示省略标记（...）。
+			在使用的时候，有时候发现不会出现省略标记效果，经过测试发现，使用ellipsis的时候，必须配合overflow:hidden; white-space:nowrap; width:50%;这三个样式共同使用才会有效果，示例代码：
+	 
+/*-----------------------------------------------------------------------------------------------------------*/
+/*index界面编写开始！*/
+
+.section{
+	padding: 10px 0;
+    margin-bottom: 30px;
+    min-height: 200px;
+}
+.section:nth-child(2n) {
+	background: #f7f7f7;
+	padding:40px 0px 20px 0px;
+	margin-bottom: 30px;
+}
+.wrapper{	
+	width: 950px;
+	margin:0px auto;	
+}
+.section .wrapper:before ,.section .wrapper:after ,.pic{
+    content: "";
+    display: block;
+    clear: both;
+}
+#index-sns{
+	position: relative;
+	overflow: hidden;
+	padding: 10px 0px;
+	min-height: 200px;
+	margin-bottom: 30px;
+}
+.wrapper .side{
+	position: relative;
+	float: right;
+	width: 265px;
+	margin-left: 30px;
+}
+.wrapper h2{
+	font: 15px arial, Helvetica, sans-serif;
+	color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+.wrapper .pl , .pic a{
+	font: 12px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+}
+.wrapper .side .sideinfo .sidelist .sidelist-name-data{
+	display: block;
+	margin-bottom: 15px;
+	font-size: 13px;
+	line-height: 1;
+	color: #aaa;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.wrapper .side .sideinfo .sidelist{
+	margin-top: 10px;
+}
+.wrapper .side .sideinfo .sidelist-name{
+	display: inline-block;
+	margin-bottom: 6px;
+	color: #669;
+	font-size: 14px;
+	line-height: 1.3;	
+}
+.wrapper .side .sideinfo .sidelist-name:hover{
+	background:#669; 
+	color: #ccc;
+}
+.wrapper a:hover{
+	background:#669; 
+	color: #ccc;
+}
+.wrapper .main {
+	overflow: hidden;
+	position: relative;
+}
+.wrapper .main .main-info{
+	width: auto;
+	width: 350px;
+	float: left;
+	margin-right: 30px;
+}
+.wrapper .main .main-info .info-left {
+	position: relative;
+}
+.wrapper .main .main-info .info-left .pic{
+	max-height: 200px;
+	min-height: 160px;
+	position: relative;
+}
+.wrapper .main .main-info .info-left  ul li{
+	display: inline-block;
+	width: 170px;
+	float: left;
+	margin: 10px 0px 0px 10px;
+}
+.wrapper .main .main-info .info-left  ul {
+	margin: -10px 0px 0px -10px;
+}
+.wrapper .main .main-info .info-left .pic img{
+	width: 170px;
+}
+.info-left .pic a,span{
+	font-size: 11px;
+	color: #37a;
+}
+.pl a{
+	font-size: 11px;
+	color: #37a;
+}
+.pic a:hover{
+	background:#669; 
+	color: #ccc;
+ }
+.pic span{
+	color: #999;
+	border:none;
+}
+.info-right {
+	color: #666;
+	zoom:1;
+	margin-right: 30px;
+	overflow: hidden;
+}
+.info-right li{
+	margin-top: 12px;
+}
+.info-right a ,.titles p{
+	font-size: 12px;
+}
+.auther {
+	color: #999;
+}
+
+/*------------------------------------index-time开始--------------------------------------------------------------*/
+
+.wrapper .sidenav {
+	float: left;
+	margin-right: 20px;
+	width: 100px;
+}
+.sidenav .sidenav-title {
+	font-size: 24px;
+	color: #494949;
+}
+.main .time-list li {
+	display: inline-block;
+	width: 100px;
+	vertical-align: top;
+	margin-right: 60px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.cover {
+	margin-bottom: 10px;
+	position: relative;
+	display: block;
+}
+.type-name {
+	display: block;
+	margin-top: 10px;
+	line-height: 1;
+	color: #999999;
+}
+.time-list-pic img {
+	width: 100px;
+	height: 141px;
+}
+.time-list-name {
+	font-size: 13px;
+	color: #333333;
+	line-height: 1.38;
+}
+
+/*------------------------------------index-time结束--------------------------------------------------------------*/
+
+/*------------------------------------index-视频开始--------------------------------------------------------------*/
+
+.video-list li {
+	display: inline-block;
+	width: 250px;
+	margin-right: 30px;
+	vertical-align: top;
+}
+.video-list li:last-child {
+	margin-right: 0px;
+}
+.video-list-cover {
+	height: 140px;
+	margin-bottom: 11px;
+}
+.video-list-name {
+	font-size: 13px;
+	color: #494949;
+	line-height: 1.54;
+}
+.video-h2{
+	margin-top: 20px;
+}
+.video-list-2{
+	margin-bottom: 25px;
+}
+.video-list-cover a{
+	background: url(https://img3.doubanio.com/dae/niffler/niffler/images/f9493ac4-d428-11e7-a75c-0242ac11002e.jpg);
+	position: relative;
+    display: block;
+    color: #fff;
+    height: 100%;
+    background: center / cover no-repeat;
+}
+
+/*------------------------------------index-视频结束--------------------------------------------------------------*/
+
+/*------------------------------------index-movie开始--------------------------------------------------------------*/
+
+.sideinfo {
+	margin-bottom: 30px;
+	width: auto;
+}
+.sidenav-links {
+	margin-bottom: 40px;
+}
+.sidenav-links ul li{
+	margin-top: 4px;
+	font-size: 14px;
+	position: relative;
+	text-align: left;
+}
+.sidenav-links ul li a,.tags ul li a:link{
+	color: #27a;
+}
+.sidenav-links ul li a,.tags ul li a:visited{
+	color: #669;
+	text-decoration: none;
+}
+.sidenav-links ul li a:hover{
+	color: #669;
+	text-decoration: none;
+	background: #27a;
+	color: #fff;
+}
+.side .sideinfo .tags ul li {
+	display: inline-block;
+	width: 4em;
+}
+.tags ul li {
+	font-size: 12px;
+}
+.tags ul li a:hover{
+	color: #669;
+	text-decoration: none;
+	background: #27a;
+	color: #fff;
+}
+.hot-movie li{
+	list-style-type: decimal;  
+	border-bottom: 1px solid #eaeaea;
+	margin-bottom: 6px;
+	padding-bottom: 5px;
+	font-size: 11px;
+}
+.hot-movie ol{
+	margin: 0px;
+	padding: 0px;
+}
+
+/********
+无序列表  <ul></ul>
+有序列表  <ol></ol>
+********/
+
+.hot-movie ol li a,.movie-name a:link{
+	color: #27a;
+}
+.hot-movie ol li a,.movie-name a:visited{
+	color: #669;
+	text-decoration: none;
+}
+.hot-movie ol li a:hover{
+	color: #669;
+	text-decoration: none;
+	background: #27a;
+	color: #fff;
+}
+.movie-name a:hover{
+	color: #669;
+	text-decoration: none;
+	background: #27a;
+	color: #fff;
+}
+.hot-movie ol li a{
+	font-size: 12px;
+	margin-left: 5px;
+}
+.wrapper .sidenav .section-name {
+	font-size: 24px;
+	color: #27a;
+}
+.main .movie-list li{
+	display: inline-block;
+	margin-top: 10px;
+	width: 24.8%;
+	vertical-align: top;
+	text-align: center;
+	font-size: 12px;
+	word-spacing: normal;
+	letter-spacing: normal;/*此标签letter-spacing 属性增加或减少字符间的空白（字符间距）
+								----normal	默认。规定字符间没有额外的空间。
+								----length	定义字符间的固定空间（允许使用负值）。
+								----inherit	规定应该从父元素继承 letter-spacing 属性的值。
+								*/
+}
+.main .list{
+	font-size: 0px;
+	letter-spacing: -.31em;
+}
+.movie-pic {
+	height: 145px;
+	overflow: hidden;
+}
+.list .movie-pic {
+	margin-bottom: 10px;
+}
+.movie-list .movie-name {
+	margin-bottom: 4px;
+	list-style:none;
+	font-size: 13px;
+	line-height: 1.45;
+	word-wrap: break-word;/*此标签为CSS3标签，意义为允许长文字单词或url跳到下一行*/
+}
+.rating {
+	margin-bottom: 4px;
+}
+.rating .rating-star{
+	display: inline-block;
+	width: 55px;
+	height: 11px;
+	overflow: hidden;
+	background: url(../img/rating_pic.png) no-repeat;
+	background-position: 0 -22px;
+}
+.rating i{
+	margin-left: 4px;
+	color: #e09015;
+	font-style: normal;
+}
+.by-ticket{
+	background: #1c8bd0;
+	color: rgb(255,255,255);
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 2px;
+	text-align: center;
+}
+.by-ticket a:visited{
+	background: #999a95;
+    color: #fff;
+}
+
+/*************************************************index-movie完成***************************************/
+
+
+/*************************************************index-group开始***************************************/
+
+.group-side {
+	margin-bottom: 30px;
+}
+.group-side-type {
+	margin-bottom: 10px;
+} 
+.group-side-type .type-list-title a{
+	width: 100%;
+	color: #333;	
+	font-size: 14px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+}
+#index-group .group-side-type ul li a {
+	color: #017a85;
+}
+.group-side-type li{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 11px;
+}
+
+.main .group-list ul li {
+	display: inline-block;
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 248px;
+	color: #999;
+}
+.main .group-list ul {
+	margin-left: -30px;
+	margin-top: -30px;
+}
+.group-list .pic {
+    float: left;
+    margin-right: 15px;
+}
+.group-list .info{
+	overflow: hidden;
+}
+.group-list .info a{
+	word-wrap: break-word;
+	font-size: 13px;
+	margin-bottom: 5px;
+	display: block;
+	line-height: 1.56;
+}
+.group-list .info span{
+	display: block;
+	font-size: 11px;
+	color: #333;
+}
+#index-group .wrapper .group-side .side-type ul a:hover{
+	background: #37a;
+	color: #fff;
+}
+
+/*************************************************index-group完成***************************************/
+
+/*************************************************index-book开始****************************************/
+
+#index-book .sidenav ul {
+	margin-bottom: 30px;
+}
+
+.book-app .book-app-icon {
+	background: url(../img/app_icons_50_10.jpg)  no-repeat;
+	background-position: 0px 0px;
+	width: 50px;
+	height: 50px;
+	vertical-align: top;
+	display: inline-block;
+}
+.book-side {
+	margin-bottom: 30px;
+}
+.book-info-list {
+	padding-top: 10px;
+	margin-bottom: 10px;
+	margin-top: -1px;
+	border-top: 1px solid #eaeaea;
+}
+.book-info-list ul {
+	margin-left: 10px;
+}
+.book-info-list ul li {
+	display: inline-block;
+	margin-left: 10px;
+}
+.book-list-name {
+	width: auto;
+	font-size: 12px;
+	color: #999;
+}
+#index-book .book-info-list ul li a {
+    color: #614e3c;
+    font-size: 11px;
+}
+.book-info-list:first-child {
+	border:0;
+}
+.book-info-list ul:first-child{
+	margin-left: 0px;
+}
+#index-book .main .pic {
+	margin-bottom: 10px;
+}
+.book-name {
+	margin-bottom: 4px;
+}
+#index-book .main .pic img{
+	width: 100px;
+}
+.main .book-list li {
+    display: inline-block;
+    width: 24.8%;
+    margin-bottom: 40px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+.free-read {
+	background: #999a95;
+	color:#fff;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 2px;
+	text-align: center;
+}
+/*伪类选择器 nth-child() 在IE6-8和FF3.0-浏览器不支持,CSS3中nth-of-type(n)（比如nth-of-type(1)）这个特殊的类选择符可以样式更加个性的标题和段落等，
+	不过，目前nth-of-type(n)只支持火狐3、opera、safari和chrome等部分浏览器。
+/*:nth-child()选择某个元素的一个或多个特定的子元素；你可以按这种方式进行选择： 
+
+/*:nth-child(length);/*参数是具体数字 length为整数*/
+
+/*:nth-child(n);/*参数是n,n从0开始计算*/
+
+/*:nth-child(n*length)/*n的倍数选择，n从0开始算*/
+
+/*:nth-child(n+length);/*选择大于length后面的元素*/
+
+/*:nth-child(-n+length)/*选择小于length前面的元素*/
+
+/*:nth-child(n*length+1);/*表示隔几选一*/
+
+/*例子：
+
+/*li:nth-child(3){background:orange;}/*把第3个li的背景设为橙色*/
+
+/*li:nth-child(3n){background:orange;}/*把第3、第6、第9、…、所有3的倍数的li的背景设为橙色*/
+
+/*li:nth-child(n+3){background:orange;}/*选择从第3个元素后面的li背景设为橙色*/
+
+/*li:nth-child(-n+3){background:orange;}/*选择从第3个元素前面的li把背景设为橙色*/
+
+/*li:nth-child(3n+1){background:orange;}/*这种方法是实现隔几选一的效果*/
+
+/*:fist-child选择某个元素的第一个子元素*/
+/*.section:nth-child(2n) {
+	background: #f7f7f7;
+	padding:40px 0px 20px 0px;
+	margin-bottom: 30px;
+}
+*/
+#index-book .list ul li a:hover{
+	background: #37a;
+	color: #fff;
+}
+#index-book .list ul li a：link{
+	color: #614e3c;
+}
+/*************************************************index-book结束****************************************/
+
+
+/*************************************************index-music开始****************************************/
+
+.FM-app .FM-app-icon{
+	background: url(../img/app_icons_50_10.jpg)  no-repeat;
+	background-position: -250px 0px;
+	width: 50px;
+	height: 50px;
+	vertical-align: top;
+	display: inline-block;
+}
+.musician-app .musician-app-icon{
+	background: url(../img/app_icons_50_10.jpg)  no-repeat;
+	background-position: -50px 0px;
+	width: 50px;
+	height: 50px;
+	vertical-align: top;
+	display: inline-block;
+}
+#index-music .sidenav ul {
+	margin-bottom: 30px;
+}
+#index-music .sidenav h2{
+	color: #f38c00;
+}
+.music-num {
+	display:inline-block;
+	float: left;
+}
+.music-info-pic {
+	position: relative;
+	float: left;
+	display: inline-block;
+	min-height: 60px;
+	margin-right: 10px;
+}
+.music-side-info:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.music-num {
+	margin-right: 10px;
+}
+.music-info-cont {
+	display: inline-block;
+}
+.musician-type{
+	margin-top: 4px;
+	overflow: hidden;
+	zoom:1;
+}
+.music-info-cont a{
+	font-size: 12px;
+	color: #555d53;
+}
+.music-info-cont p{
+	font-size: 11px;
+	color: #999; 
+	margin: 0;
+	padding: 0;
+	margin-bottom: 4px;
+}
+.musician-list {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
+.music-side {
+	margin-bottom: 30px;
+}
+.main .main-list ul{
+	margin-top: -41px;
+}
+.main .main-list li {
+    display: inline-block;
+    width: 24.8%;
+    margin-top: 40px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+.main .main-list .pic{
+	margin-bottom: 10px;
+}
+.music-name {
+	margin-bottom: 4px;
+}
+.main-middle-space{
+	width: 950px;
+	margin-bottom: 50px;
+	clear: both;
+}
+#index-music {
+	margin-bottom: 50px;
+}
+
+/*************************************************index-music结束****************************************/
+
+
+/*************************************************index-doupin开始****************************************/
+
+.main-market ul li {
+	width: 240px;
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.main-market .main-market-pic {
+	height: 220px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.main-market-foot{
+	margin-top: 10px;
+}
+.main-market-name {
+	float: left;
+}
+.main-market-foot span{
+	color: #e55457;
+	float: right;
+	font-size: 16px;
+}
+.market-side .side-list .side-list-cont{
+	margin-bottom: 10px;
+}
+.market-side-pic {
+	width: 100%;
+	height: 95px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.market-side {
+	margin-bottom: 30px;
+	width: auto;
+}
+.market-side-foot-data {
+	float: right;
+}
+.market-side-title{
+	font-size: 14px;
+	margin-bottom: 3px;
+}
+.market-side-title a{
+	
+	color: #3377A9;
+}
+.market-side-foot {
+    clear: both;
+    overflow: hidden;
+    margin: 0px;
+}
+.market-side-foot span{
+	color: #6A6A6A;
+    font-size: 12px;
+}
+
+/*************************************************index-doupin结束****************************************/
+
+
+/*************************************************index-events开始****************************************/
+
+.cate-list {
+	width: 100%;
+}
+.cate-list a{
+	font-size: 14px !important;
+}
+.events-cate{
+	margin-bottom: 10px;
+	margin-left: -10px;
+}
+.events-cate ul li {
+	display: inline-block;
+	margin-left: 10px;
+	zoom:1;
+}
+.events-cate ul li a{
+	color: #643;
+	font-size: 12px;
+}
+.main .main-events ul li {
+	display: inline-block;
+	width: 248px;
+	margin-left: 30px;
+	margin-top: 30px;
+	color: #666;
+	font-size: 12px;
+}
+.main .main-events ul{
+	margin-left: -30px;
+	margin-top: -20px;
+
+}
+.main-events .pic {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.main-events-info {
+	overflow: hidden;
+}
+.main-events-info a{
+	color: #643;
+}
+.main-events-info .title {
+	line-height: 1.45;
+    font-size: 13px;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+}
+.main-events-info address {
+	list-style: none;
+	font-style: normal;
+}
+#index-events {
+	margin-bottom: 30px;
+}
+
+/*************************************************index-events结束****************************************/
+
+
+/*************************************************index-footer结束****************************************/
+
+#ft {
+	overflow: hidden;
+    zoom: 1;
+    padding: 14px 0;
+    margin-top: 30px;
+    border-top: 1px dashed #dcdcdc;
+    color: #999;
+}
+.fleft {
+	float: left;
+
+}
+.fright {
+	float: right;
+}
+#ft a{
+	color: #669;
+}
+#ft a:hover {
+	background: #37a;
+	color: #fff;
+}
+
+/*************************************************index-footer结束**********************************************/
+
+
+/*************************************************a链接hover开始**************************************************/
+
+.wrapper a:hover{
+	background: #37a !important;
+	color: #fff !important;
+	cursor: pointer;
+}
+.wrapper a:visited{
+    text-decoration: none;
+}
+.sidelist a:hover{
+	background: #37a !important;
+	color: #fff !important;
+}
+#index-music .section-name a {
+	color: #f38c00;
+}
+#index-events .section-name a {
+	color: #f38c00;
+}
+#index-market .section-name a {
+	color: #1f9432;
+}
+#index-book .sidenav a {
+	color: #4a2f14;
+}
+#index-group .sidenav a {
+	color: #007982;
+}
+#index-movie .sidenav a {
+	color: #27a;
+}
+
+/************************************************a链接hover结束**************************************************/
